@@ -76,7 +76,7 @@ input {
   }
 
   .section {
-    padding-top: 120px;
+    padding: 120px 0;
   }
 }
 
@@ -294,10 +294,15 @@ input {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 .mobile-contacts-menu {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 48px;
+}
+
+.mobile-contacts {
   margin-bottom: 48px;
 }
 
@@ -307,15 +312,18 @@ input {
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 40px;
+}
+
+.mobile-menu-list-item:last-child {
+  margin: 0;
 }
 
 .mobile-menu-list-item:first-child {
   color: #404bbf;
 }
 
-.mobile-menu-list-item {
-  margin-bottom: 40px;
-}
+
 
 .mobile-contacts-item {
   font-style: normal;
@@ -343,6 +351,10 @@ input {
   height: 40px;
 }
 
+.mobile-menu-social-list-item:last-child {
+  margin-bottom: 0;
+}
+
 .mobile-menu-social-list-link {
   display: flex;
   line-height: 0;
@@ -353,6 +365,12 @@ input {
   background-color: #4d5ae5;
   border-radius: 50%;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 /* backdrop */
@@ -618,6 +636,7 @@ input {
   .modal {
     width: 408px;
     min-height: 584px;
+    padding: 72px 24px 24px;
   }
 
   .review-form-own-checkbox {
@@ -632,6 +651,12 @@ input {
     display: block;
     justify-content: inherit;
     align-items: inherit;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .modal {
+    padding: 72px 24px 24px;
   }
 }
 /* 
@@ -652,6 +677,7 @@ hero */
   background-color: #2e2f42;
   background-position: center center;
   background-size: cover;
+  max-width: 320px;
 }
 
 @media screen and (max-width: 767px) and (min-resolution: 192dpi) {
@@ -711,6 +737,7 @@ hero */
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/hero/dark-bg-tab-min.jpg);
+      max-width: 768px;
   }
   .title-one {
     font-size: 56px;
@@ -767,7 +794,6 @@ hero */
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  align-items: center;
   gap: 72px;
 }
 
@@ -876,6 +902,7 @@ team */
   display: flex;
   flex-direction: column;
   gap: 72px;
+  align-items: center;
 }
 
 .team-item {
@@ -1211,7 +1238,7 @@ team */
 
   .container-content {
     justify-content: center;
-    max-width: unset;
+    max-width: 1158px;;
     align-items: center;
     gap: unset;
   }
